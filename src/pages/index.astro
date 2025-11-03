@@ -1,32 +1,69 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import DecryptedText from '../components/ReactComponents/decryptedText';
+import Pill from '../components/Pill.astro';
+import LinkedInIcon from '../icons/LinkedIn.astro';
+import GitHubIcon from '../icons/GitHub.astro';
+import ArtStationIcon from '../icons/ArtStation.astro';
+import SketchfabIcon from '../icons/Sketchfab.astro';
+import MailIcon from '../icons/Mail.astro';
+import DecryptedText from '../components/ReactComponents/decryptedText.jsx';
 import Badge from '../components/Badge.astro';
+import VerticalTimeLine from '../components/VerticalTimeLine.astro';
+import SectionContainer from '../components/SectionContainer.astro';
 ---
 
 <Layout>
-	<main>
-		<section class="flex flex-col items-center justify-center mt-20 w-full mx-auto">
-			<div class="flex items-center gap-x-4 pb-8">
-					<DecryptedText 
-					text="Hey, soy Juan José Camacho"
-					speed={80}             
-					maxIterations={30}         
-					sequential={false}        
-					animateOn="view"          
-					className="font-bold text-5xl text-white"
-					encryptedClassName="text-gray-500 text-5xl font-bold"
-					client:load
-					sequential={true}
-					revealDirection="start"
-				/>
-				<div class="flex justify-center items-center">
-					<Badge>Disponible para trabajar</Badge>
-				</div>
-			</div>
-			<h2 class="text-xl w-3/5 text-center opacity-80">
-				Ingeniero multimedia y desarollador web full stack de Bogotá, Colombia. Especializado en crear experiencias digitales atractivas y funcionales.
-			</h2>
-		</section>
-	</main>
+  <main>
+    <SectionContainer class="pt-44 pb-24">
+      <div class="flex items-center gap-x-4 pb-8">
+        <DecryptedText
+          text="Hey, soy Juan José Camacho"
+          speed={80}
+          maxIterations={30}
+          sequential={false}
+          animateOn="view"
+          className="font-bold text-5xl text-white"
+          encryptedClassName="text-gray-500 text-5xl font-bold"
+          client:load
+          sequential={true}
+          revealDirection="start"
+        />
+        <div class="flex justify-center items-center">
+          <Badge>Disponible para trabajar</Badge>
+        </div>
+      </div>
+      <h2 class="text-2xl w-1/2 text-center opacity-80 text-wrap">
+        Estudiante de Ingeniería Multimedia con experiencia en arte 3D y desarrollo
+        frontend/backend. Manejo herramientas como Autodesk Maya, Blender, Substance Painter, y
+        motores como Unity. En desarrollo, domino Python, JavaScript, y frameworks como Django,
+        FastAPI, ASP.NET, y Vite.
+      </h2>
+
+      <nav class="flex gap-x-4 mt-8">
+        <Pill href="#">
+          <LinkedInIcon class="size-5" />
+          LinkedIn
+        </Pill>
+        <Pill href="#">
+          <GitHubIcon class="size-5" />
+          GitHub
+        </Pill>
+        <Pill href="#">
+          <ArtStationIcon class="size-5" />
+          ArtStation
+        </Pill>
+        <Pill href="#">
+          <SketchfabIcon class="size-5" />
+          Sketchfab
+        </Pill>
+        <Pill href="#">
+          <MailIcon class="size-5" />
+          juanjose34251@gmail.com
+        </Pill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer class="pt-24">
+      <VerticalTimeLine />
+    </SectionContainer>
+  </main>
 </Layout>
