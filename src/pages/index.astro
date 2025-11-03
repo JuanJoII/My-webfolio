@@ -6,13 +6,17 @@ import GitHubIcon from '../icons/GitHub.astro';
 import ArtStationIcon from '../icons/ArtStation.astro';
 import SketchfabIcon from '../icons/Sketchfab.astro';
 import MailIcon from '../icons/Mail.astro';
+import ExpIcon from '../icons/ExpIcon.astro';
 import DecryptedText from '../components/ReactComponents/decryptedText.jsx';
 import Badge from '../components/Badge.astro';
 import VerticalTimeLine from '../components/VerticalTimeLine.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 ---
 
-<Layout>
+<Layout
+  title="Juan José Camacho - Portafolio"
+  description="Portafolio de Juan José Camacho, estudiante de Ingeniería Multimedia y desarrollador y programador frontend/backend."
+>
   <main>
     <SectionContainer class="pt-44 pb-24">
       <div class="flex items-center gap-x-4 pb-8">
@@ -44,15 +48,15 @@ import SectionContainer from '../components/SectionContainer.astro';
           <LinkedInIcon class="size-5" />
           LinkedIn
         </Pill>
-        <Pill href="#">
+        <Pill href="https://github.com/JuanJoII">
           <GitHubIcon class="size-5" />
           GitHub
         </Pill>
-        <Pill href="#">
+        <Pill href="https://www.artstation.com/jj_21">
           <ArtStationIcon class="size-5" />
           ArtStation
         </Pill>
-        <Pill href="#">
+        <Pill href="https://sketchfab.com/juanjose34251">
           <SketchfabIcon class="size-5" />
           Sketchfab
         </Pill>
@@ -62,7 +66,11 @@ import SectionContainer from '../components/SectionContainer.astro';
         </Pill>
       </nav>
     </SectionContainer>
-    <SectionContainer class="pt-24">
+    <SectionContainer id="experiencia">
+      <div class="w-1/2 mb-8 ml-4 items-center flex flex-row gap-x-4 justify-start">
+        <ExpIcon class="size-8" />
+        <h2 class="text-4xl font-semibold">Experiencia</h2>
+      </div>
       <VerticalTimeLine />
     </SectionContainer>
   </main>

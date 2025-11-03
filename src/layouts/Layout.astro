@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import '@fontsource-variable/onest';
+
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -9,15 +11,17 @@ import '@fontsource-variable/onest';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>{title}</title>
   </head>
   <body>
     <div
-      class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
+      class="absolute inset-0 -z-10 bg-[radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
     >
     </div>
+
     <Header />
     <slot />
   </body>
@@ -30,12 +34,20 @@ import '@fontsource-variable/onest';
 
   html {
     font-family: 'Onest Variable', system-ui, sans-serif;
+    scroll-behavior: smooth;
   }
 
   body {
+    position: relative;
     background: #050505;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+  }
+
+  @media (prefers-reduce-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
   }
 </style>
