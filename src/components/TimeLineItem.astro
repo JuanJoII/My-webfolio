@@ -1,9 +1,8 @@
 ---
-import Badge from './Badge.astro';
 const { title, badge, date, description } = Astro.props;
 ---
 
-<h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white gap-x-4">
+<h3 class="flex items-center mb-2 text-lg font-semibold text-sky-200 dark:text-sky-200 gap-x-2">
   {title}
   {
     badge && (
@@ -13,9 +12,9 @@ const { title, badge, date, description } = Astro.props;
     )
   }
 </h3>
-<time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+<time class="block mb-2 text-sm font-normal leading-none text-sky-100/70 dark:text-sky-100/70">
   {date}
 </time>
-<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+<p class="mb-4 text-base font-normal text-sky-50/55 dark:text-sky-50/55">
   {description}
 </p>
