@@ -51,7 +51,7 @@ const PROJECTS = [
       'App multiplataforma para generar paletas armónicas desde colores, imágenes o palabras.',
     link: 'https://drive.google.com/file/d/1B5toO3-tF-tMjotnQA25IqNf_izBO6hj/view?usp=drive_link',
     github: 'https://github.com/JuanJoII/Bloom',
-    image: '/projects/Unstable__IMG.webp',
+    image: '/projects/Bloom_IMG.webp',
     tags: [TAGS.PYTHON, TAGS.FLET],
   },
   {
@@ -60,14 +60,13 @@ const PROJECTS = [
       'Aplicación completa en Django para gestionar eventos. Funcionalidad más allá de un CRUD.',
     link: 'https://www.youtube.com/watch?v=gDmIDE9cmSg',
     github: 'https://github.com/JuanJoII/Event_Management',
-    image: '/projects/Unstable__IMG.webp',
+    image: '/projects/EM_IMG.webp',
     tags: [TAGS.PYTHON, TAGS.TAILWIND, TAGS.DJANGO],
   },
 ];
 ---
 
-<div class="flex flex-col gap-y-16">
-    
+<div class="flex flex-col gap-y-16 pt-8">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
