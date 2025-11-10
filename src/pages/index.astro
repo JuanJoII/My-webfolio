@@ -7,10 +7,12 @@ import ArtStationIcon from '../icons/ArtStation.astro';
 import SketchfabIcon from '../icons/Sketchfab.astro';
 import MailIcon from '../icons/Mail.astro';
 import ExpIcon from '../icons/ExpIcon.astro';
+import CodeIcon from '../icons/Code.astro';
 import DecryptedText from '../components/ReactComponents/decryptedText.jsx';
 import Badge from '../components/Badge.astro';
 import VerticalTimeLine from '../components/VerticalTimeLine.astro';
 import SectionContainer from '../components/SectionContainer.astro';
+import Projects from '../components/Projects.astro';
 ---
 
 <Layout
@@ -66,12 +68,19 @@ import SectionContainer from '../components/SectionContainer.astro';
         </Pill>
       </nav>
     </SectionContainer>
-    <SectionContainer id="experiencia">
-      <div class="w-1/2 mb-8 ml-4 items-center flex flex-row gap-x-4 justify-start">
+    <SectionContainer id="experiencia" class="pb-16">
+      <div class="w-1/2 mb-8 ml-18 items-center flex flex-row gap-x-4 justify-start">
         <ExpIcon class="size-8" />
         <h2 class="text-4xl font-semibold">Experiencia</h2>
       </div>
       <VerticalTimeLine />
+    </SectionContainer>
+    <SectionContainer id="proyectos">
+      <div class="w-1/2 mb-8 ml-18 items-center flex flex-row gap-x-4 justify-start">
+        <CodeIcon class="size-8" />
+        <h2 class="text-4xl font-semibold">Proyectos Destacados</h2>
+      </div>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>

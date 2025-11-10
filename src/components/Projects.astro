@@ -1,0 +1,118 @@
+---
+import GitHubIcon from '../icons/GitHub.astro';
+import PythonIcon from '../icons/Python.astro';
+import PygameIcon from '../icons/Pygame.astro';
+import DjangoIcon from '../icons/Django.astro';
+import FletIcon from '../icons/Flet.astro';
+import Tailwind from '../icons/Tailwind.astro';
+import Link from '../icons/Link.astro';
+import LinkButton from './LinkButton.astro';
+import AnimatedContent from './ReactComponents/AnimatedContent';
+
+const TAGS = {
+  PYTHON: {
+    name: ' Python',
+    class: 'bg-black text-white',
+    icon: PythonIcon,
+  },
+  TAILWIND: {
+    name: 'Tailwind CSS',
+    class: 'bg-[#003159] text-white',
+    icon: Tailwind,
+  },
+  PYGAME: {
+    name: 'Pygame',
+    class: 'bg-[#244C96] text-white',
+    icon: PygameIcon,
+  },
+  DJANGO: {
+    name: 'Django',
+    class: 'bg-[#092E20] text-white',
+    icon: DjangoIcon,
+  },
+  FLET: {
+    name: 'Flet',
+    class: 'bg-[#E01E37]/60 text-white',
+    icon: FletIcon,
+  },
+};
+const PROJECTS = [
+  {
+    title: 'Unstable - Juego de plataformas desarrollado con Pygame',
+    description: 'Juego arcade por turnos con plataformas destructibles. Inspirado en BLOKI.',
+    link: 'https://stefanylopez.itch.io/unstable',
+    github: 'https://github.com/JuanJoII/Unstable',
+    image: '/projects/Unstable__IMG.webp',
+    tags: [TAGS.PYTHON, TAGS.PYGAME],
+  },
+  {
+    title: 'Bloom – Generador de Paletas',
+    description:
+      'App multiplataforma para generar paletas armónicas desde colores, imágenes o palabras.',
+    link: 'https://drive.google.com/file/d/1B5toO3-tF-tMjotnQA25IqNf_izBO6hj/view?usp=drive_link',
+    github: 'https://github.com/JuanJoII/Bloom',
+    image: '/projects/Unstable__IMG.webp',
+    tags: [TAGS.PYTHON, TAGS.FLET],
+  },
+  {
+    title: 'WebApp Gestión de Eventos',
+    description:
+      'Aplicación completa en Django para gestionar eventos. Funcionalidad más allá de un CRUD.',
+    link: 'https://www.youtube.com/watch?v=gDmIDE9cmSg',
+    github: 'https://github.com/JuanJoII/Event_Management',
+    image: '/projects/Unstable__IMG.webp',
+    tags: [TAGS.PYTHON, TAGS.TAILWIND, TAGS.DJANGO],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+    
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              class="object-cover object-top w-full h-56 md:h-72 transition duration-500 md:group-hover:scale-105"
+              src={image}
+              alt={`Imagen para proyecto ${title}`}
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">{title}</h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}>
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHubIcon class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>
