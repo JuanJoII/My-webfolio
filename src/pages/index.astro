@@ -8,11 +8,14 @@ import SketchfabIcon from '../icons/Sketchfab.astro';
 import MailIcon from '../icons/Mail.astro';
 import ExpIcon from '../icons/ExpIcon.astro';
 import CodeIcon from '../icons/Code.astro';
+import AboutMeIcon from '../icons/User.astro';
 import DecryptedText from '../components/ReactComponents/decryptedText.jsx';
 import Badge from '../components/Badge.astro';
 import VerticalTimeLine from '../components/VerticalTimeLine.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Projects from '../components/Projects.astro';
+import ThreeDProjects from '../components/3dProjects.astro';
+import Sketchfab from '../icons/Sketchfab.astro';
 ---
 
 <Layout
@@ -67,22 +70,35 @@ import Projects from '../components/Projects.astro';
       </nav>
     </SectionContainer>
     <SectionContainer id="experiencia" class="pb-16">
-      <div class="w-1/2 mb-8 ml-18 items-center flex flex-row gap-x-4 justify-start">
+      <div class="w-5xl mb-8 items-center flex flex-row gap-x-4">
         <ExpIcon class="size-8" />
         <h2 class="text-4xl font-semibold">Experiencia</h2>
       </div>
-      <VerticalTimeLine />
+      <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-16">
+        <VerticalTimeLine />
+      </div>
     </SectionContainer>
     <SectionContainer id="proyectos" class="pb-16 min-h-screen">
-      <div class="w-1/2 mb-8 items-center flex flex-row gap-x-4 justify-start">
+      <div class="w-5xl mb-8 items-center flex flex-row gap-x-4 justify-start">
         <CodeIcon class="size-8" />
-        <h2 class="text-4xl font-semibold">Proyectos Destacados</h2>
+        <h2 class="text-4xl font-semibold">Proyectos De Código Destacados</h2>
       </div>
-      <Projects />
+      <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-16">
+        <Projects />
+      </div>
     </SectionContainer>
-    <SectionContainer id="sobremi">
-      <div class="w-1/2 mb-8 ml-18 items-center flex flex-row gap-x-4 justify-start">
-        <CodeIcon class="size-8" />
+    <SectionContainer class="pb-16">
+      <div class="w-5xl mb-8 items-center flex flex-row gap-x-4 justify-start">
+        <Sketchfab class="size-8" />
+        <h2 class="text-4xl font-semibold">Proyectos 3D Destacados</h2>
+      </div>
+      <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-16">
+        <ThreeDProjects />
+      </div>
+    </SectionContainer>
+    <SectionContainer id="sobre-mi">
+      <div class="w-5xl mb-8 ml-18 items-center flex flex-row gap-x-4 justify-start">
+        <AboutMeIcon class="size-8" />
         <h2 class="text-4xl font-semibold">Sobre Mí</h2>
       </div>
     </SectionContainer>
