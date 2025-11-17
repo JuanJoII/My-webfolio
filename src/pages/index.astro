@@ -26,20 +26,20 @@ import AboutMe from '../components/AboutMe.astro';
 >
   <main>
     <SectionContainer class="pt-44 pb-32">
-      <div class="flex items-center gap-x-4 pb-8">
+      <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-x-4 pb-8 px-4">
         <DecryptedText
           text="Hey, soy Juan José Camacho"
           speed={80}
           maxIterations={30}
           sequential={false}
           animateOn="view"
-          className="font-bold text-5xl text-white"
-          encryptedClassName="text-gray-500 text-5xl font-bold"
+          className="font-bold text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-white"
+          encryptedClassName="text-gray-500 text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold"
           client:load
           sequential={true}
           revealDirection="start"
         />
-        <div class="flex justify-center items-center">
+        <div class="flex justify-center md:justify-start items-center">
           <Badge>Disponible para trabajar</Badge>
         </div>
       </div>
@@ -48,7 +48,7 @@ import AboutMe from '../components/AboutMe.astro';
         frontend/backend.
       </h2>
 
-      <nav class="flex gap-x-4 my-12">
+      <nav class="flex flex-wrap justify-center gap-4 my-12 px-4">
         <Pill href="#">
           <LinkedInIcon class="size-5" />
           LinkedIn
@@ -76,38 +76,49 @@ import AboutMe from '../components/AboutMe.astro';
       </nav>
     </SectionContainer>
     <SectionContainer id="experiencia" class="pb-16">
-      <div class="w-5xl mb-12 items-center flex flex-row gap-x-4">
-        <ExpIcon class="size-8" />
-        <h2 class="text-4xl font-semibold">Experiencia</h2>
+      <div
+        class="w-full max-w-5xl mb-8 sm:mb-10 md:mb-12 flex flex-row items-center gap-x-3 sm:gap-x-4"
+      >
+        <ExpIcon class="size-6 sm:size-7 md:size-8" />
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold">Experiencia</h2>
       </div>
-      <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-16">
+
+      <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-12 sm:gap-y-14 md:gap-y-16">
         <VerticalTimeLine />
       </div>
     </SectionContainer>
     <SectionContainer id="proyectos" class="pb-16 min-h-screen">
-      <div class="w-5xl mb-12 items-center flex flex-row gap-x-4 justify-start">
-        <CodeIcon class="size-8" />
-        <h2 class="text-4xl font-semibold">Proyectos De Código Destacados</h2>
+      <div
+        class="w-full max-w-5xl mb-8 sm:mb-10 md:mb-12 flex flex-row items-center gap-x-3 sm:gap-x-4"
+      >
+        <CodeIcon class="size-6 sm:size-7 md:size-8" />
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold">
+          Proyectos De Código Destacados
+        </h2>
       </div>
-      <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-16">
+      <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-12 sm:gap-y-14 md:gap-y-16">
         <Projects />
       </div>
     </SectionContainer>
     <SectionContainer class="pb-16">
-      <div class="w-5xl mb-12 items-center flex flex-row gap-x-4 justify-start">
-        <Sketchfab class="size-8" />
-        <h2 class="text-4xl font-semibold">Proyectos 3D Destacados</h2>
+      <div
+        class="w-full max-w-5xl mb-8 sm:mb-10 md:mb-12 flex flex-row items-center gap-x-3 sm:gap-x-4"
+      >
+        <Sketchfab class="size-6 sm:size-7 md:size-8" />
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold">Proyectos 3D Destacados</h2>
       </div>
-      <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-16">
+      <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-12 sm:gap-y-14 md:gap-y-16">
         <ThreeDProjects />
       </div>
     </SectionContainer>
     <SectionContainer id="sobre-mi" class="pb-6">
-      <div class="w-5xl mb-8 ml-18 items-center flex flex-row gap-x-4 justify-start">
-        <AboutMeIcon class="size-8" />
-        <h2 class="text-4xl font-semibold">Sobre Mí</h2>
+      <div
+        class="w-full max-w-5xl mb-8 sm:mb-10 md:mb-12 flex flex-row items-center gap-x-3 sm:gap-x-4"
+      >
+        <AboutMeIcon class="size-6 sm:size-7 md:size-8" />
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold">Sobre Mí</h2>
       </div>
-      <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-16">
+      <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-12 sm:gap-y-14 md:gap-y-16">
         <AboutMe />
       </div>
     </SectionContainer>
