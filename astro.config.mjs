@@ -9,7 +9,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   
   site: 'hhttps://JuanJoII.github.io',
-  base: 'My-webfolio',
+  base: '/My-webfolio',
 
   integrations: [react()],
 
