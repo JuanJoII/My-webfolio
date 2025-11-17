@@ -1,6 +1,24 @@
 ---
 import TimeLineIcon from '../icons/TimeLineIcon.astro';
 import TimeLineItem from './TimeLineItem.astro';
+import DragonIcon from '../icons/Dragon.astro';
+import PhotoIcon from '../icons/Photo.astro';
+import StoreIcon from '../icons/Store.astro';
+
+const ICON = {
+  DRAGON: {
+    class: 'size-3.5',
+    icon: DragonIcon,
+  },
+  PHOTO: {
+    class: 'size-3.5',
+    icon: PhotoIcon,
+  },
+  STORE: {
+    class: 'size-4',
+    icon: StoreIcon,
+  },
+};
 
 const ALL_TIMELINE_ITEMS = [
   {
@@ -9,18 +27,21 @@ const ALL_TIMELINE_ITEMS = [
     date: '20 de Mayo 2025',
     description:
       'Modelado y texturizado del personaje "ENT" usando Maya, Blender y Substance Painter. Optimizado para Unity.',
+    icon: ICON.DRAGON,
   },
   {
     title: 'Covers & Miniaturas – Prod. MarcellFrank',
     badge: 'Diseñador Gráfico',
     date: '10 de Marzo 2024 - presente',
     description: 'Composición y montaje visual para portadas musicales usando Adobe Photoshop.',
+    icon: ICON.PHOTO,
   },
   {
     title: 'Web Yeez-Clouds',
     badge: 'Desarrollador Fullstack',
     date: '20 de Julio 2025',
     description: 'Desarrollo de sitio e-commerce para marca de ropa usando Reflex y Tailwind CSS.',
+    icon: ICON.STORE,
   },
 ];
 ---
@@ -29,7 +50,11 @@ const ALL_TIMELINE_ITEMS = [
   {
     ALL_TIMELINE_ITEMS.map((item) => (
       <li class="mb-16 ms-6 mt-6">
-        <TimeLineIcon />
+        {item.icon && (
+          <TimeLineIcon>
+            <item.icon.icon class={`text-cyan-400 ${item.icon.class}`} />
+          </TimeLineIcon>
+        )}
         <TimeLineItem
           title={item.title}
           badge={item.badge}
