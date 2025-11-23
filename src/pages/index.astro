@@ -43,85 +43,84 @@ import AboutMe from '../components/AboutMe.astro';
           <Badge>Disponible para trabajar</Badge>
         </div>
       </div>
-      <h2 class="text-base sm:text-lg md:text-xl lg:text-2xl w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto text-center opacity-80 text-wrap mb-14 mt-4 lg:mt- px-4">
-        Estudiante de Ingeniería Multimedia con experiencia en arte 3D y desarrollo
-        frontend/backend.
+      <h2
+        class="text-base sm:text-lg md:text-xl lg:text-2xl w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto text-center opacity-80 text-wrap mb-14 mt-4 lg:mt- px-4"
+      >
+        Estudiante de Ingeniería Multimedia con experiencia en <strong>arte 3D</strong> y desarrollo
+        <strong>Fullstack.</strong>
       </h2>
     </SectionContainer>
 
-      <nav class="flex flex-wrap justify-center gap-4 mb-18 px-4">
-        <Pill href="#">
-          <LinkedInIcon class="size-5" />
-          LinkedIn
-        </Pill>
-        <Pill href="https://github.com/JuanJoII">
-          <GitHubIcon class="size-5" />
-          GitHub
-        </Pill>
-        <Pill href="https://www.artstation.com/jj_21">
-          <ArtStationIcon class="size-5" />
-          ArtStation
-        </Pill>
-        <Pill href="https://sketchfab.com/juanjose34251">
-          <SketchfabIcon class="size-5" />
-          Sketchfab
-        </Pill>
-        <Pill href="https://wa.me/573146420343">
-          <WhatsAppIcon class="size-5" />
-          WhatsApp
-        </Pill>
-        <Pill href="mailto:juanjose34251@gmail.com">
-          <MailIcon class="size-5" />
-          Gmail
-        </Pill>
-      </nav>
-    </SectionContainer>
-    <SectionContainer id="experiencia" class="pb-24 pt-6">
-      <div
-        class="w-full max-w-5xl mb-8 sm:mb-10 md:mb-12 flex flex-row items-center gap-x-3 sm:gap-x-4"
-      >
-        <ExpIcon class="size-6 sm:size-7 md:size-8" />
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold">Experiencia</h2>
-      </div>
-
-      <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-12 sm:gap-y-14 md:gap-y-16">
-        <VerticalTimeLine />
-      </div>
-    </SectionContainer>
-    <SectionContainer id="proyectos" class="pb-16 min-h-screen">
-      <div
-        class="w-full max-w-5xl mb-8 sm:mb-10 md:mb-12 flex flex-row items-center gap-x-3 sm:gap-x-4"
-      >
-        <CodeIcon class="size-6 sm:size-7 md:size-8" />
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold">
-          Proyectos De Código Destacados
-        </h2>
-      </div>
-      <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-12 sm:gap-y-14 md:gap-y-16">
-        <Projects />
-      </div>
-    </SectionContainer>
-    <SectionContainer class="pb-16">
-      <div
-        class="w-full max-w-5xl mb-8 sm:mb-10 md:mb-12 flex flex-row items-center gap-x-3 sm:gap-x-4"
-      >
-        <Sketchfab class="size-6 sm:size-7 md:size-8" />
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold">Proyectos 3D Destacados</h2>
-      </div>
-      <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-12 sm:gap-y-14 md:gap-y-16">
-        <ThreeDProjects />
-      </div>
-    </SectionContainer>
-    <SectionContainer id="sobre-mi" class="pb-6">
-      <div
-        class="w-full max-w-5xl mb-8 sm:mb-10 md:mb-12 flex flex-row items-center gap-x-3 sm:gap-x-4"
-      >
-        <AboutMeIcon class="size-6 sm:size-7 md:size-8" />
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold">Sobre Mí</h2>
-      </div>
-      <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-12 sm:gap-y-14 md:gap-y-16">
-        <AboutMe />
-      </div>
-    </SectionContainer>
+    <nav class="flex flex-wrap justify-center gap-4 mb-18 px-4">
+      <Pill href="#">
+        <LinkedInIcon class="size-5" />
+        LinkedIn
+      </Pill>
+      <Pill href="https://github.com/JuanJoII">
+        <GitHubIcon class="size-5" />
+        GitHub
+      </Pill>
+      <Pill href="https://www.artstation.com/jj_21">
+        <ArtStationIcon class="size-5" />
+        ArtStation
+      </Pill>
+      <Pill href="https://sketchfab.com/juanjose34251">
+        <SketchfabIcon class="size-5" />
+        Sketchfab
+      </Pill>
+      <Pill href="https://wa.me/573146420343">
+        <WhatsAppIcon class="size-5" />
+        WhatsApp
+      </Pill>
+      <Pill href="mailto:juanjose34251@gmail.com">
+        <MailIcon class="size-5" />
+        Gmail
+      </Pill>
+    </nav>
   </main>
+  <SectionContainer id="experiencia" class="pb-24 pt-6">
+    <div
+      class="w-full max-w-5xl mb-8 sm:mb-10 md:mb-12 flex flex-row items-center gap-x-3 sm:gap-x-4"
+    >
+      <ExpIcon class="size-6 sm:size-7 md:size-8" />
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold">Experiencia</h2>
+    </div>
+
+    <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-12 sm:gap-y-14 md:gap-y-16">
+      <VerticalTimeLine />
+    </div>
+  </SectionContainer>
+  <SectionContainer id="proyectos" class="pb-16 min-h-screen">
+    <div
+      class="w-full max-w-5xl mb-8 sm:mb-10 md:mb-12 flex flex-row items-center gap-x-3 sm:gap-x-4"
+    >
+      <CodeIcon class="size-6 sm:size-7 md:size-8" />
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold">Proyectos De Código Destacados</h2>
+    </div>
+    <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-12 sm:gap-y-14 md:gap-y-16">
+      <Projects />
+    </div>
+  </SectionContainer>
+  <SectionContainer class="pb-16">
+    <div
+      class="w-full max-w-5xl mb-8 sm:mb-10 md:mb-12 flex flex-row items-center gap-x-3 sm:gap-x-4"
+    >
+      <Sketchfab class="size-6 sm:size-7 md:size-8" />
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold">Proyectos 3D Destacados</h2>
+    </div>
+    <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-12 sm:gap-y-14 md:gap-y-16">
+      <ThreeDProjects />
+    </div>
+  </SectionContainer>
+  <SectionContainer id="sobre-mi" class="pb-6">
+    <div
+      class="w-full max-w-5xl mb-8 sm:mb-10 md:mb-12 flex flex-row items-center gap-x-3 sm:gap-x-4"
+    >
+      <AboutMeIcon class="size-6 sm:size-7 md:size-8" />
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold">Sobre Mí</h2>
+    </div>
+    <div class="w-full max-w-5xl mx-auto flex flex-col gap-y-12 sm:gap-y-14 md:gap-y-16">
+      <AboutMe />
+    </div>
+  </SectionContainer>
 </Layout>
