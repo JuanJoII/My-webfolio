@@ -5,13 +5,15 @@ import PygameIcon from '../icons/Pygame.astro';
 import DjangoIcon from '../icons/Django.astro';
 import FletIcon from '../icons/Flet.astro';
 import Tailwind from '../icons/Tailwind.astro';
+import MayaIcon from '../icons/Maya.astro';
+import FastapiIcon from '../icons/Fastapi.astro';
 import Link from '../icons/Link.astro';
 import LinkButton from './LinkButton.astro';
 
 const TAGS = {
   PYTHON: {
     name: ' Python',
-    class: 'bg-black text-white',
+    class: 'bg-[#3771a1]/60 text-white',
     icon: PythonIcon,
   },
   TAILWIND: {
@@ -34,8 +36,53 @@ const TAGS = {
     class: 'bg-[#E01E37]/60 text-white',
     icon: FletIcon,
   },
+  MAYA: {
+    name: 'Maya',
+    class: 'bg-[#70aaaf]/60 text-white',
+    icon: MayaIcon,
+  },
+  FASTAPI: {
+    name: 'FastAPI',
+    class: 'bg-[#009688]/60 text-white',
+    icon: FastapiIcon,
+  },
 };
 const PROJECTS = [
+  {
+    title: "Q'Ancient Plane",
+    description:
+      'Plug-in para generar aviones quimbayas de forma procedural basado en piezas modulares, terrenos y nubes a partir de fractales y animar su vuelo a partir de curvas con ciertas características especificas en Autodesk Maya.',
+    github: 'https://github.com/JuanJoII/Q-Ancient-Plane',
+    image: '/My-webfolio/projects/QAP_SS_002.webp',
+    tags: [TAGS.PYTHON, TAGS.MAYA],
+  },
+  {
+    title: "Saberes Que Habitan",
+    description:
+      'Backend para una plataforma que buscaba generar networking entre artesanos indígenas y compradores interesados en sus productos, facilitando la comunicación y el comercio justo.',
+    link: 'https://www.youtube.com/watch?v=a1iaFzoJxOU',
+    github: 'https://github.com/JuanJoII/SQH/tree/main/backend',
+    image: '/My-webfolio/projects/SQH_Back_IMG.webp',
+    tags: [TAGS.PYTHON, TAGS.FASTAPI],
+  },
+  {
+    title: "Rig Scripts para Autodesk Maya",
+    description:
+      'Una colección de scripts en Python para agilizar el proceso de rigging en Autodesk Maya, incluyendo herramientas para crear columnas, controladores, sistemas de IK/FK y cadas dinámicas.',
+    link: 'https://youtu.be/AxRbGLiEmeU?si=5dkqDg_V8cC5vJ04',
+    github: 'https://github.com/JuanJoII/Tecnical-Art-Scripts-',
+    image: '/My-webfolio/projects/Rig_IMG.webp',
+    tags: [TAGS.PYTHON, TAGS.MAYA],
+  },
+  {
+    title: 'WebApp Gestión de Eventos',
+    description:
+      'Aplicación completa en Django para gestionar eventos. Funcionalidad más allá de un CRUD.',
+    link: 'https://www.youtube.com/watch?v=gDmIDE9cmSg',
+    github: 'https://github.com/JuanJoII/Event_Management',
+    image: '/My-webfolio/projects/EM_IMG.webp',
+    tags: [TAGS.PYTHON, TAGS.TAILWIND, TAGS.DJANGO],
+  },
   {
     title: 'Unstable - Juego de plataformas desarrollado con Pygame',
     description: 'Juego arcade por turnos con plataformas destructibles. Inspirado en BLOKI.',
@@ -52,15 +99,6 @@ const PROJECTS = [
     github: 'https://github.com/JuanJoII/Bloom',
     image: '/My-webfolio/projects/Bloom_IMG.webp',
     tags: [TAGS.PYTHON, TAGS.FLET],
-  },
-  {
-    title: 'WebApp Gestión de Eventos',
-    description:
-      'Aplicación completa en Django para gestionar eventos. Funcionalidad más allá de un CRUD.',
-    link: 'https://www.youtube.com/watch?v=gDmIDE9cmSg',
-    github: 'https://github.com/JuanJoII/Event_Management',
-    image: '/My-webfolio/projects/EM_IMG.webp',
-    tags: [TAGS.PYTHON, TAGS.TAILWIND, TAGS.DJANGO],
   },
 ];
 ---
