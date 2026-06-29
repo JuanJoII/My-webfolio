@@ -1,4 +1,12 @@
 ---
+import { Image } from 'astro:assets';
+import bloomImg from '../../public/projects/Bloom_IMG.webp';
+import emImg from '../../public/projects/EM_IMG.webp';
+import jadeImg from '../../public/projects/Jade_IMG.webp';
+import qapImg from '../../public/projects/QAP_SS_002.webp';
+import reportaSabanaImg from '../../public/projects/ReportaSabana_IMG.webp';
+import sqhImg from '../../public/projects/SQH_Back_IMG.webp';
+import unstableImg from '../../public/projects/Unstable__IMG.webp';
 import DjangoIcon from '../icons/Django.astro';
 import DockerIcon from '../icons/Docker.astro';
 import DotnetIcon from '../icons/Dotnet.astro';
@@ -89,7 +97,7 @@ const PROJECTS = [
     description:
       'Web app fullstack para que los ciudadanos puedan reportar al estado problemas de caracter publico en sus respectivas localidades y que el estado pueda atender y dar seguimiento a estos reportes de manera eficiente.',
     github: 'https://github.com/JuanJoII/DSW-Report-Project',
-    image: '/My-webfolio/projects/ReportaSabana_IMG.webp',
+    image: reportaSabanaImg,
     tags: [TAGS.DOTNET, TAGS.SVELTE, TAGS.SQLSERVER, TAGS.DOCKER, TAGS.TAILWIND],
   },
   {
@@ -97,7 +105,7 @@ const PROJECTS = [
     description:
       'JADE es una app móvil de bienestar digital. Ayuda a estudiantes y jóvenes profesionales a combatir la fatiga digital mediante Digital Detox, formación de hábitos y recompensas positivas.',
     github: 'https://github.com/JuanJoII/JadeApp',
-    image: '/My-webfolio/projects/Jade_IMG.webp',
+    image: jadeImg,
     tags: [TAGS.FLUTTER],
   },
   {
@@ -105,7 +113,7 @@ const PROJECTS = [
     description:
       'Plug-in para generar aviones quimbayas de forma procedural basado en piezas modulares, terrenos y nubes a partir de fractales y animar su vuelo a partir de curvas con ciertas características especificas en Autodesk Maya.',
     github: 'https://github.com/JuanJoII/Q-Ancient-Plane',
-    image: '/My-webfolio/projects/QAP_SS_002.webp',
+    image: qapImg,
     tags: [TAGS.PYTHON, TAGS.MAYA],
   },
   {
@@ -114,7 +122,7 @@ const PROJECTS = [
       'Backend para una plataforma que buscaba generar networking entre artesanos indígenas y compradores interesados en sus productos, facilitando la comunicación y el comercio justo.',
     link: 'https://www.youtube.com/watch?v=a1iaFzoJxOU',
     github: 'https://github.com/JuanJoII/SQH/tree/main/backend',
-    image: '/My-webfolio/projects/SQH_Back_IMG.webp',
+    image: sqhImg,
     tags: [TAGS.PYTHON, TAGS.FASTAPI, TAGS.SUPABASE],
   },
   {
@@ -123,7 +131,7 @@ const PROJECTS = [
       'Aplicación completa en Django para gestionar eventos. Funcionalidad más allá de un CRUD.',
     link: 'https://www.youtube.com/watch?v=gDmIDE9cmSg',
     github: 'https://github.com/JuanJoII/Event_Management',
-    image: '/My-webfolio/projects/EM_IMG.webp',
+    image: emImg,
     tags: [TAGS.PYTHON, TAGS.TAILWIND, TAGS.DJANGO],
   },
   {
@@ -131,7 +139,7 @@ const PROJECTS = [
     description: 'Juego arcade por turnos con plataformas destructibles. Inspirado en BLOKI.',
     link: 'https://stefanylopez.itch.io/unstable',
     github: 'https://github.com/JuanJoII/Unstable',
-    image: '/My-webfolio/projects/Unstable__IMG.webp',
+    image: unstableImg,
     tags: [TAGS.PYTHON, TAGS.PYGAME],
   },
   {
@@ -140,7 +148,7 @@ const PROJECTS = [
       'App multiplataforma para generar paletas armónicas desde colores, imágenes o palabras.',
     link: 'https://drive.google.com/file/d/1B5toO3-tF-tMjotnQA25IqNf_izBO6hj/view?usp=drive_link',
     github: 'https://github.com/JuanJoII/Bloom',
-    image: '/My-webfolio/projects/Bloom_IMG.webp',
+    image: bloomImg,
     tags: [TAGS.PYTHON, TAGS.FLET],
   },
 ];
@@ -152,10 +160,11 @@ const PROJECTS = [
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-            <img
+            <Image
               class="object-cover object-top w-full h-56 md:h-72 transition duration-500 md:group-hover:scale-105"
               src={image}
               alt={`Imagen para proyecto ${title}`}
+              width={700}
             />
           </div>
         </div>
