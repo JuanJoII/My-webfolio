@@ -1,19 +1,25 @@
 ---
 import DjangoIcon from '../icons/Django.astro';
+import DockerIcon from '../icons/Docker.astro';
+import DotnetIcon from '../icons/Dotnet.astro';
 import FastapiIcon from '../icons/Fastapi.astro';
 import FletIcon from '../icons/Flet.astro';
+import FlutterIcon from '../icons/Flutter.astro';
 import GitHubIcon from '../icons/GitHub.astro';
 import Link from '../icons/Link.astro';
 import MayaIcon from '../icons/Maya.astro';
 import PygameIcon from '../icons/Pygame.astro';
 import PythonIcon from '../icons/Python.astro';
+import SqlServerIcon from '../icons/SqlServer.astro';
+import SupabaseIcon from '../icons/Supabase.astro';
+import SvelteIcon from '../icons/Svelte.astro';
 import Tailwind from '../icons/Tailwind.astro';
 import LinkButton from './LinkButton.astro';
 
 const TAGS = {
   PYTHON: {
     name: ' Python',
-    class: 'bg-[#3771a1]/60 text-white',
+    class: 'bg-[#3771a1]/40 text-white',
     icon: PythonIcon,
   },
   TAILWIND: {
@@ -33,21 +39,67 @@ const TAGS = {
   },
   FLET: {
     name: 'Flet',
-    class: 'bg-[#E01E37]/60 text-white',
+    class: 'bg-[#E01E37]/40 text-white',
     icon: FletIcon,
   },
   MAYA: {
     name: 'Maya',
-    class: 'bg-[#70aaaf]/60 text-white',
+    class: 'bg-[#70aaaf]/40 text-white',
     icon: MayaIcon,
   },
   FASTAPI: {
     name: 'FastAPI',
-    class: 'bg-[#009688]/60 text-white',
+    class: 'bg-[#009688]/40 text-white',
     icon: FastapiIcon,
+  },
+  DOCKER: {
+    name: 'Docker',
+    class: 'bg-[#0db7ed]/40 text-white',
+    icon: DockerIcon,
+  },
+  DOTNET: {
+    name: '.NET',
+    class: 'bg-[#512bd4]/40 text-white',
+    icon: DotnetIcon,
+  },
+  SVELTE: {
+    name: 'Svelte',
+    class: 'bg-[#ff3e00]/40 text-white',
+    icon: SvelteIcon,
+  },
+  SQLSERVER: {
+    name: 'SQL Server',
+    class: 'bg-[#CC2927]/40 text-white',
+    icon: SqlServerIcon,
+  },
+  SUPABASE: {
+    name: 'Supabase',
+    class: 'bg-[#3ECF8E]/40 text-white',
+    icon: SupabaseIcon,
+  },
+  FLUTTER: {
+    name: 'Flutter',
+    class: 'bg-[#02569B]/40 text-white',
+    icon: FlutterIcon,
   },
 };
 const PROJECTS = [
+  {
+    title: 'Reporta Sabana',
+    description:
+      'Web app fullstack para que los ciudadanos puedan reportar al estado problemas de caracter publico en sus respectivas localidades y que el estado pueda atender y dar seguimiento a estos reportes de manera eficiente.',
+    github: 'https://github.com/JuanJoII/DSW-Report-Project',
+    image: '/My-webfolio/projects/ReportaSabana_IMG.webp',
+    tags: [TAGS.DOTNET, TAGS.SVELTE, TAGS.SQLSERVER, TAGS.DOCKER, TAGS.TAILWIND],
+  },
+  {
+    title: 'Jade App',
+    description:
+      'JADE es una app móvil de bienestar digital. Ayuda a estudiantes y jóvenes profesionales a combatir la fatiga digital mediante Digital Detox, formación de hábitos y recompensas positivas.',
+    github: 'https://github.com/JuanJoII/JadeApp',
+    image: '/My-webfolio/projects/Jade_IMG.webp',
+    tags: [TAGS.FLUTTER],
+  },
   {
     title: "Q'Ancient Plane",
     description:
@@ -63,16 +115,7 @@ const PROJECTS = [
     link: 'https://www.youtube.com/watch?v=a1iaFzoJxOU',
     github: 'https://github.com/JuanJoII/SQH/tree/main/backend',
     image: '/My-webfolio/projects/SQH_Back_IMG.webp',
-    tags: [TAGS.PYTHON, TAGS.FASTAPI],
-  },
-  {
-    title: 'Rig Scripts para Autodesk Maya',
-    description:
-      'Una colección de scripts en Python para agilizar el proceso de rigging en Autodesk Maya, incluyendo herramientas para crear columnas, controladores, sistemas de IK/FK y cadas dinámicas.',
-    link: 'https://youtu.be/AxRbGLiEmeU?si=5dkqDg_V8cC5vJ04',
-    github: 'https://github.com/JuanJoII/Tecnical-Art-Scripts-',
-    image: '/My-webfolio/projects/Rig_IMG.webp',
-    tags: [TAGS.PYTHON, TAGS.MAYA],
+    tags: [TAGS.PYTHON, TAGS.FASTAPI, TAGS.SUPABASE],
   },
   {
     title: 'WebApp Gestión de Eventos',
