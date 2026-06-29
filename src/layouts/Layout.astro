@@ -1,8 +1,8 @@
 ---
-import '../styles/global.css';
+import '@fontsource-variable/onest';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import '@fontsource-variable/onest';
+import '../styles/global.css';
 
 interface Props {
   title: string;
@@ -32,7 +32,7 @@ const ogImage = new URL(image, Astro.site);
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <meta name="keywords" content="Juan José Camacho, portafolio, ingeniería multimedia, desarrollador fullstack, programador frontend, desarrollador web, arte 3d, modelado 3d, portafolio web" />
+    <meta name="keywords" content="Juan José Camacho, portafolio, ingeniería multimedia, desarrollador fullstack, programador frontend, desarrollador web, arte 3d, modelado 3d, portafolio web, backend" />
     <meta name="author" content="Juan José Camacho" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#050505" />
