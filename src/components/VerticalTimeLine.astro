@@ -1,9 +1,11 @@
 ---
-import TimeLineIcon from '../icons/TimeLineIcon.astro';
-import TimeLineItem from './TimeLineItem.astro';
+import BreadIcon from '../icons/Bread.astro';
 import DragonIcon from '../icons/Dragon.astro';
+import EggsIcon from '../icons/Eggs.astro';
 import PhotoIcon from '../icons/Photo.astro';
 import StoreIcon from '../icons/Store.astro';
+import TimeLineIcon from '../icons/TimeLineIcon.astro';
+import TimeLineItem from './TimeLineItem.astro';
 
 const ICON = {
   DRAGON: {
@@ -18,11 +20,35 @@ const ICON = {
     class: 'size-4',
     icon: StoreIcon,
   },
+  BREAD: {
+    class: 'size-4',
+    icon: BreadIcon,
+  },
+  EGGS: {
+    class: 'size-4',
+    icon: EggsIcon,
+  },
 };
 
 const ALL_TIMELINE_ITEMS = [
   {
-    title: 'Artista 3D – “Alas de Calabozos”',
+    title: 'Pan del Arbol',
+    badge: 'Desarrollador Web y de Automatizaciones',
+    date: '20 Abril 2026 - 23 Mayo 2026',
+    description:
+      'Creaciónd de una Landing Page para la marca "Pan del Arbol" usando Astro y Tailwind CSS. Automatización de procesos internos con workflows de n8n desplegados en un servidor privado.',
+    icon: ICON.BREAD,
+  },
+  {
+    title: 'Huevos la Colina',
+    badge: 'Desarrollador de Automatizaciones',
+    date: '11 de Abril 2026 - Presente',
+    description:
+      'Creaciónd de chatbot para la marca "Huevos la Colina" usando n8n. Optimización de procesos de facturación, venta y producción mediante automatizaciones y workflows desplegados en un servidor privado.',
+    icon: ICON.EGGS,
+  },
+  {
+    title: 'Alas de Calabozos',
     badge: 'Artista 3D',
     date: '6 de Febrero 2025 - 20 de Mayo 2025',
     description:

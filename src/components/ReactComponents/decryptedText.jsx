@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef } from 'react';
 import { motion } from 'motion/react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function DecryptedText({
   text,
@@ -192,6 +192,7 @@ export default function DecryptedText({
           const isRevealedOrDone = revealedIndices.has(index) || !isScrambling || !isHovering;
 
           return (
+            // biome-ignore lint/suspicious/noArrayIndexKey: character positions are static and do not reorder
             <span key={index} className={isRevealedOrDone ? className : encryptedClassName}>
               {char}
             </span>
