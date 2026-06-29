@@ -1,19 +1,33 @@
 ---
-import GitHubIcon from '../icons/GitHub.astro';
-import PythonIcon from '../icons/Python.astro';
-import PygameIcon from '../icons/Pygame.astro';
+import { Image } from 'astro:assets';
+import bloomImg from '../../public/projects/Bloom_IMG.webp';
+import emImg from '../../public/projects/EM_IMG.webp';
+import jadeImg from '../../public/projects/Jade_IMG.webp';
+import qapImg from '../../public/projects/QAP_SS_002.webp';
+import reportaSabanaImg from '../../public/projects/ReportaSabana_IMG.webp';
+import sqhImg from '../../public/projects/SQH_Back_IMG.webp';
+import unstableImg from '../../public/projects/Unstable__IMG.webp';
 import DjangoIcon from '../icons/Django.astro';
-import FletIcon from '../icons/Flet.astro';
-import Tailwind from '../icons/Tailwind.astro';
-import MayaIcon from '../icons/Maya.astro';
+import DockerIcon from '../icons/Docker.astro';
+import DotnetIcon from '../icons/Dotnet.astro';
 import FastapiIcon from '../icons/Fastapi.astro';
+import FletIcon from '../icons/Flet.astro';
+import FlutterIcon from '../icons/Flutter.astro';
+import GitHubIcon from '../icons/GitHub.astro';
 import Link from '../icons/Link.astro';
+import MayaIcon from '../icons/Maya.astro';
+import PygameIcon from '../icons/Pygame.astro';
+import PythonIcon from '../icons/Python.astro';
+import SqlServerIcon from '../icons/SqlServer.astro';
+import SupabaseIcon from '../icons/Supabase.astro';
+import SvelteIcon from '../icons/Svelte.astro';
+import Tailwind from '../icons/Tailwind.astro';
 import LinkButton from './LinkButton.astro';
 
 const TAGS = {
   PYTHON: {
     name: ' Python',
-    class: 'bg-[#3771a1]/60 text-white',
+    class: 'bg-[#3771a1]/40 text-white',
     icon: PythonIcon,
   },
   TAILWIND: {
@@ -33,46 +47,83 @@ const TAGS = {
   },
   FLET: {
     name: 'Flet',
-    class: 'bg-[#E01E37]/60 text-white',
+    class: 'bg-[#E01E37]/40 text-white',
     icon: FletIcon,
   },
   MAYA: {
     name: 'Maya',
-    class: 'bg-[#70aaaf]/60 text-white',
+    class: 'bg-[#70aaaf]/40 text-white',
     icon: MayaIcon,
   },
   FASTAPI: {
     name: 'FastAPI',
-    class: 'bg-[#009688]/60 text-white',
+    class: 'bg-[#009688]/40 text-white',
     icon: FastapiIcon,
+  },
+  DOCKER: {
+    name: 'Docker',
+    class: 'bg-[#0db7ed]/40 text-white',
+    icon: DockerIcon,
+  },
+  DOTNET: {
+    name: '.NET',
+    class: 'bg-[#512bd4]/40 text-white',
+    icon: DotnetIcon,
+  },
+  SVELTE: {
+    name: 'Svelte',
+    class: 'bg-[#ff3e00]/40 text-white',
+    icon: SvelteIcon,
+  },
+  SQLSERVER: {
+    name: 'SQL Server',
+    class: 'bg-[#CC2927]/40 text-white',
+    icon: SqlServerIcon,
+  },
+  SUPABASE: {
+    name: 'Supabase',
+    class: 'bg-[#3ECF8E]/40 text-white',
+    icon: SupabaseIcon,
+  },
+  FLUTTER: {
+    name: 'Flutter',
+    class: 'bg-[#02569B]/40 text-white',
+    icon: FlutterIcon,
   },
 };
 const PROJECTS = [
+  {
+    title: 'Reporta Sabana',
+    description:
+      'Web app fullstack para que los ciudadanos puedan reportar al estado problemas de caracter publico en sus respectivas localidades y que el estado pueda atender y dar seguimiento a estos reportes de manera eficiente.',
+    github: 'https://github.com/JuanJoII/DSW-Report-Project',
+    image: reportaSabanaImg,
+    tags: [TAGS.DOTNET, TAGS.SVELTE, TAGS.SQLSERVER, TAGS.DOCKER, TAGS.TAILWIND],
+  },
+  {
+    title: 'Jade App',
+    description:
+      'JADE es una app móvil de bienestar digital. Ayuda a estudiantes y jóvenes profesionales a combatir la fatiga digital mediante Digital Detox, formación de hábitos y recompensas positivas.',
+    github: 'https://github.com/JuanJoII/JadeApp',
+    image: jadeImg,
+    tags: [TAGS.FLUTTER],
+  },
   {
     title: "Q'Ancient Plane",
     description:
       'Plug-in para generar aviones quimbayas de forma procedural basado en piezas modulares, terrenos y nubes a partir de fractales y animar su vuelo a partir de curvas con ciertas características especificas en Autodesk Maya.',
     github: 'https://github.com/JuanJoII/Q-Ancient-Plane',
-    image: '/My-webfolio/projects/QAP_SS_002.webp',
+    image: qapImg,
     tags: [TAGS.PYTHON, TAGS.MAYA],
   },
   {
-    title: "Saberes Que Habitan",
+    title: 'Saberes Que Habitan',
     description:
       'Backend para una plataforma que buscaba generar networking entre artesanos indígenas y compradores interesados en sus productos, facilitando la comunicación y el comercio justo.',
     link: 'https://www.youtube.com/watch?v=a1iaFzoJxOU',
     github: 'https://github.com/JuanJoII/SQH/tree/main/backend',
-    image: '/My-webfolio/projects/SQH_Back_IMG.webp',
-    tags: [TAGS.PYTHON, TAGS.FASTAPI],
-  },
-  {
-    title: "Rig Scripts para Autodesk Maya",
-    description:
-      'Una colección de scripts en Python para agilizar el proceso de rigging en Autodesk Maya, incluyendo herramientas para crear columnas, controladores, sistemas de IK/FK y cadas dinámicas.',
-    link: 'https://youtu.be/AxRbGLiEmeU?si=5dkqDg_V8cC5vJ04',
-    github: 'https://github.com/JuanJoII/Tecnical-Art-Scripts-',
-    image: '/My-webfolio/projects/Rig_IMG.webp',
-    tags: [TAGS.PYTHON, TAGS.MAYA],
+    image: sqhImg,
+    tags: [TAGS.PYTHON, TAGS.FASTAPI, TAGS.SUPABASE],
   },
   {
     title: 'WebApp Gestión de Eventos',
@@ -80,7 +131,7 @@ const PROJECTS = [
       'Aplicación completa en Django para gestionar eventos. Funcionalidad más allá de un CRUD.',
     link: 'https://www.youtube.com/watch?v=gDmIDE9cmSg',
     github: 'https://github.com/JuanJoII/Event_Management',
-    image: '/My-webfolio/projects/EM_IMG.webp',
+    image: emImg,
     tags: [TAGS.PYTHON, TAGS.TAILWIND, TAGS.DJANGO],
   },
   {
@@ -88,7 +139,7 @@ const PROJECTS = [
     description: 'Juego arcade por turnos con plataformas destructibles. Inspirado en BLOKI.',
     link: 'https://stefanylopez.itch.io/unstable',
     github: 'https://github.com/JuanJoII/Unstable',
-    image: '/My-webfolio/projects/Unstable__IMG.webp',
+    image: unstableImg,
     tags: [TAGS.PYTHON, TAGS.PYGAME],
   },
   {
@@ -97,7 +148,7 @@ const PROJECTS = [
       'App multiplataforma para generar paletas armónicas desde colores, imágenes o palabras.',
     link: 'https://drive.google.com/file/d/1B5toO3-tF-tMjotnQA25IqNf_izBO6hj/view?usp=drive_link',
     github: 'https://github.com/JuanJoII/Bloom',
-    image: '/My-webfolio/projects/Bloom_IMG.webp',
+    image: bloomImg,
     tags: [TAGS.PYTHON, TAGS.FLET],
   },
 ];
@@ -109,10 +160,11 @@ const PROJECTS = [
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-            <img
+            <Image
               class="object-cover object-top w-full h-56 md:h-72 transition duration-500 md:group-hover:scale-105"
               src={image}
               alt={`Imagen para proyecto ${title}`}
+              width={700}
             />
           </div>
         </div>
